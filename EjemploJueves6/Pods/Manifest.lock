@@ -4,6 +4,7 @@ PODS:
     - Facebook-iOS-SDK (~> 3.11)
 
 DEPENDENCIES:
+  - Facebook-iOS-SDK (~> 3.7)
   - Parse
 
 SPEC CHECKSUMS:

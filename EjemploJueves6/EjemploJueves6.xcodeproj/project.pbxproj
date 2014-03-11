@@ -68,8 +68,8 @@
 		8E761E7418C88C3300C438D5 /* EjemploJueves6Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EjemploJueves6Tests-Info.plist"; sourceTree = "<group>"; };
 		8E761E7618C88C3300C438D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8E761E7818C88C3300C438D5 /* EjemploJueves6Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EjemploJueves6Tests.m; sourceTree = "<group>"; };
-		8EB9229918CF28B00052BEC5 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = EjemploJueves6/LoginViewController.h; sourceTree = "<group>"; };
-		8EB9229A18CF28B00052BEC5 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = EjemploJueves6/LoginViewController.m; sourceTree = "<group>"; };
+		8EB9229918CF28B00052BEC5 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		8EB9229A18CF28B00052BEC5 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		E6648CC63F2E431C9E9AAEFC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -125,8 +125,6 @@
 		8E761E4718C88C3200C438D5 = {
 			isa = PBXGroup;
 			children = (
-				8EB9229918CF28B00052BEC5 /* LoginViewController.h */,
-				8EB9229A18CF28B00052BEC5 /* LoginViewController.m */,
 				8E761E5918C88C3300C438D5 /* EjemploJueves6 */,
 				8E761E7218C88C3300C438D5 /* EjemploJueves6Tests */,
 				8E761E5218C88C3200C438D5 /* Frameworks */,
@@ -161,6 +159,7 @@
 		8E761E5918C88C3300C438D5 /* EjemploJueves6 */ = {
 			isa = PBXGroup;
 			children = (
+				8EE6371418CF326F00207939 /* Login */,
 				8E761E6218C88C3300C438D5 /* AppDelegate.h */,
 				8E761E6318C88C3300C438D5 /* AppDelegate.m */,
 				8E761E6518C88C3300C438D5 /* Images.xcassets */,
@@ -198,6 +197,15 @@
 				8E761E7518C88C3300C438D5 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8EE6371418CF326F00207939 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				8EB9229918CF28B00052BEC5 /* LoginViewController.h */,
+				8EB9229A18CF28B00052BEC5 /* LoginViewController.m */,
+			);
+			name = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

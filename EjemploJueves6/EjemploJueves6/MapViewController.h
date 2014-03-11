@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import "LoginViewController.h"
+#import "SignUpViewController.h"
 
-@interface MapViewController : UIViewController <CLLocationManagerDelegate> {
+
+@interface MapViewController : UIViewController <CLLocationManagerDelegate, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate> {
 
         CLLocationManager *locationManager;
         float longitud;

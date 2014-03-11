@@ -45,6 +45,16 @@
 
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    if (![PFUser currentUser]) {
+        [self showLogingProcess];
+    }
+    
+}
+
 -(void)locationManager:(CLLocationManager *)manager
    didUpdateToLocation:(CLLocation *)newLocation
           fromLocation:(CLLocation *)oldLocation
@@ -86,4 +96,65 @@
     
 
 }
+
+#pragma mark - Protocolo de Login del Parse
+
+-(void)showLogingProcess{
+    
+    if(![PFUser currentUser]){
+        
+        LoginViewController *login = [[LoginViewController alloc]init];
+        
+        
+        [login setDelegate:self];
+        [login setFacebookPermissions:[NSArray arrayWithObjects:@"friends_about_me", nil]];
+        [login setFields: PFLogInFieldsUsernameAndPassword|
+         PFLogInFieldsSignUpButton | PFLogInFieldsDismissButton | PFLogInFieldsPasswordForgotten | PFLogInFieldsTwitter | PFLogInFieldsFacebook ] ;
+        
+        SignUpViewController *signupViewController = [[SignUpViewController alloc]init];
+        [signupViewController setDelegate:self];
+        
+        [login setSignUpController:signupViewController];
+        
+        [self presentViewController:login animated:YES completion:NULL];
+        
+        
+    }
+}
+-(BOOL)logInViewController:(PFLogInViewController *)logInController shouldBeginLogInWithUsername:(NSString *)username password:(NSString *)password{
+    
+    if (username && password && username.length !=0 && password.length !=0) {
+        return YES;
+    }
+    
+    [[[UIAlertView alloc]initWithTitle:@"Falta información"
+                               message:@"Porfavor completa todos los campos"
+                              delegate:nil
+                     cancelButtonTitle:@"ok"
+                     otherButtonTitles:nil] show];
+    
+    return NO;
+}
+
+// el login ha funcionado solo tenemos que comprobar el origen: Si es Twitter, Facebook o es el sistema interno
+- (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user{
+    
+    NSLog(@"Usuario Logado");
+    //aqui preguntamos si un usuario con perfil en twittwer facebook y actualizamos el campo userName2
+    // [self updateCurrentUser:user];
+    
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+-(void)logInViewController:(PFLogInViewController *)logInController didFailToLogInWithError:(NSError *)error{
+    
+    NSLog(@"Se ha producido un error: %@", error.description);
+    
+}
+
+-(void)logInViewControllerDidCancelLogIn:(PFLogInViewController *)logInController{ [self.navigationController popViewControllerAnimated:YES];
+    
+    
+}
+
 @end

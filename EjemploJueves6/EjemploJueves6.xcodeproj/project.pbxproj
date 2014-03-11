@@ -27,6 +27,7 @@
 		8E761E6F18C88C3300C438D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E761E5718C88C3300C438D5 /* UIKit.framework */; };
 		8E761E7718C88C3300C438D5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8E761E7518C88C3300C438D5 /* InfoPlist.strings */; };
 		8E761E7918C88C3300C438D5 /* EjemploJueves6Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E761E7818C88C3300C438D5 /* EjemploJueves6Tests.m */; };
+		8EB8EF3F18CF3D49000D59D9 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB8EF3E18CF3D49000D59D9 /* SignUpViewController.m */; };
 		8EB9229B18CF28B00052BEC5 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB9229A18CF28B00052BEC5 /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,8 @@
 		8E761E7418C88C3300C438D5 /* EjemploJueves6Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EjemploJueves6Tests-Info.plist"; sourceTree = "<group>"; };
 		8E761E7618C88C3300C438D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8E761E7818C88C3300C438D5 /* EjemploJueves6Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EjemploJueves6Tests.m; sourceTree = "<group>"; };
+		8EB8EF3D18CF3D49000D59D9 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		8EB8EF3E18CF3D49000D59D9 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		8EB9229918CF28B00052BEC5 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		8EB9229A18CF28B00052BEC5 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		E6648CC63F2E431C9E9AAEFC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -204,6 +207,8 @@
 			children = (
 				8EB9229918CF28B00052BEC5 /* LoginViewController.h */,
 				8EB9229A18CF28B00052BEC5 /* LoginViewController.m */,
+				8EB8EF3D18CF3D49000D59D9 /* SignUpViewController.h */,
+				8EB8EF3E18CF3D49000D59D9 /* SignUpViewController.m */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -254,7 +259,7 @@
 		8E761E4818C88C3200C438D5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Juanje Mendoza Durán";
 				TargetAttributes = {
 					8E761E6A18C88C3300C438D5 = {
@@ -345,6 +350,7 @@
 				8EB9229B18CF28B00052BEC5 /* LoginViewController.m in Sources */,
 				8E2FD3AC18C9BF0000C1C8B2 /* Localizacion.m in Sources */,
 				8E761E6018C88C3300C438D5 /* main.m in Sources */,
+				8EB8EF3F18CF3D49000D59D9 /* SignUpViewController.m in Sources */,
 				8E52DB6218C8A51600D55220 /* locationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,7 +397,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -430,7 +435,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -490,7 +494,6 @@
 		8E761E8018C88C3300C438D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EjemploJueves6.app/EjemploJueves6";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -513,7 +516,6 @@
 		8E761E8118C88C3300C438D5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EjemploJueves6.app/EjemploJueves6";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

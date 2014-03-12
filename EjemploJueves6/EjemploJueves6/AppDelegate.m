@@ -18,6 +18,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
     [self altaEnParse];
+    [self altaEnTwitter];
     
     MapViewController  *mvc= [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil];
     
@@ -64,6 +65,21 @@
     [Localizacion registerSubclass];
     [Parse setApplicationId:@"0ObDb41DGDpqnMNm5Qkmm29TowoBfQZhaSGVUqow" clientKey:@"SIqUs8b85TgoNmRGzTKs0XqvJlu2B07iyvHqASlW"];
     
+}
+
+-(void)altaEnTwitter {
+    
+    
+//    [PFTwitterUtils initializeWithConsumerKey:@"2227222836-tXR1Sac7rrrFDATeInvuitIoQRJGFnIqpyTxvE1"
+//                               consumerSecret:@"BimFbmqEcET0yv1veMc4uuj7X4wSxYZmFLM7925sDc54D"];
+    
+    [PFTwitterUtils initializeWithConsumerKey:@"ayv8CPYDZj9wS959Xg5Dg"
+                                   consumerSecret:@"ZkkmCYRxNOV7LNB24QWs09Nss1iIdcxranaqByU"];
+
+    
+
+    
+
 }
 
 @end

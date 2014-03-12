@@ -45,13 +45,53 @@
 
 }
 
--(void)viewWillAppear:(BOOL)animated {
-    
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    if (![PFUser currentUser]) {
-        [self showLogingProcess];
+    if ([PFUser currentUser]) {
+        // If the user is logged in, show their name in the welcome label.
+        
+        if ([PFTwitterUtils isLinkedWithUser:[PFUser currentUser]]) {
+               NSLog(@"Usuario de Twitter logeado: %@",[PFTwitterUtils twitter].screenName) ;
+            
+        }
     }
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    
+    [super viewDidAppear:animated];
+    
+    //if (![PFUser currentUser]) {
+        
+
+    [self showLogingProcess];
+    
+    [PFUser logOut];
+    
+    
+
+//            [PFTwitterUtils logInWithBlock:^(PFUser *user, NSError *error) {
+//                if (!user) {
+//                    // El usuario ha cancelado el login mediante Facebook.
+//                    NSLog(@"Uh oh. The user cancelled the Twitter login.");
+//                    return;
+//                } else if (user.isNew) {
+//                    NSLog(@"User signed up and logged in with Twitter!");
+//                } else {
+//                    // El usuario ya existía y se ha logado mediante Facebook.
+//                    NSLog(@"User logged in with Twitter!");
+//                }
+//            }];
+    
+//    if (![PFTwitterUtils isLinkedWithUser:[PFUser currentUser]]) {
+//        [PFTwitterUtils linkUser:[PFUser currentUser] block:^(BOOL succeeded, NSError *error) {
+//            if ([PFTwitterUtils isLinkedWithUser:[PFUser currentUser]]) {
+//                NSLog(@"Woohoo, user logged in with Twitter!");
+//            }
+//        }];
+//    }
+    //}
     
 }
 
@@ -117,8 +157,8 @@
         [login setSignUpController:signupViewController];
         
         [self presentViewController:login animated:YES completion:NULL];
-        
-        
+    
+
     }
 }
 -(BOOL)logInViewController:(PFLogInViewController *)logInController shouldBeginLogInWithUsername:(NSString *)username password:(NSString *)password{
@@ -140,9 +180,7 @@
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user{
     
     NSLog(@"Usuario Logado");
-    //aqui preguntamos si un usuario con perfil en twittwer facebook y actualizamos el campo userName2
-    // [self updateCurrentUser:user];
-    
+
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 

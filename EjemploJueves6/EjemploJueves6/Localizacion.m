@@ -14,7 +14,7 @@
 
 +(NSString *)parseClassName {
     
-    return @"localizacion"; //este es el nombre de la clase en Parse que estaba en minúsculas
+    return @"localizaciones"; //este es el nombre de la clase en Parse que estaba en minúsculas
     
 }
 
